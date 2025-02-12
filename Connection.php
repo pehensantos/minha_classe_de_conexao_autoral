@@ -46,7 +46,6 @@
 
 		public function delete($table, $WHEREthis, $isEQUAL){
 			$stringdeconexao = "DELETE FROM $table WHERE $WHEREthis = ?";
-
 			$stmt = $this->pdo->prepare($stringdeconexao);
 			$stmt->execute([$isEQUAL]);
 			print_r($stringdeconexao);
