@@ -37,7 +37,7 @@
 			foreach ($column_value as $column => $value) {
 				$column_value_dict[] = "$column = '$value'";
 			}
-																						  $column_value_dict = implode(',', $column_value_dict);
+			$column_value_dict = implode(',', $column_value_dict);
 			$stringdeconexao = "UPDATE $table SET $column_value_dict WHERE $WHEREthis = ?";
 			
 			$stmt = $this ->pdo->prepare($stringdeconexao);
